@@ -37,7 +37,7 @@ ol[role='list'] {
 /* Set core body defaults */
 body {
     min-height: 100vh;
-    line-height: 1.5rem;
+    line-height: 1.7rem;
 }
 
 /* Set shorter line heights on headings and interactive elements */
@@ -94,6 +94,7 @@ textarea:not([rows]) {
 
 :root {
     --masterPadding-padding: 1rem;
+    --masterWidth-maxwidth: 21rem;
 }
 
 body {
@@ -107,27 +108,80 @@ body {
     align-items: center;
 }
 
+/* =============== DIV LAYOUT SECTION =================== */
 /* Sharing styles between div using :is psuedo class */
 :is(div) {
     padding: var(--masterPadding-padding);
-    max-width: 21rem;
-
+    max-width: var(--masterWidth-maxwidth);
     text-align: left;
-    
+    text-wrap: balance;
 
 }
 
 .card1 {
     background-color: white;
 
+
 }
 
 .card2 {
     background-color: hsl(179, 62%, 43%);
 
-
 }
 
 .card3 {
     background-color: hsl(179, 62%, 46%);
+}
+
+/* =============== CONTENT STYLE SECTION =================== */
+/* Shared Classes */
+.header {
+    color: white;
+
+}
+
+.paragrapgh {
+    color: white;
+    font-size: 0.875rem;
+    opacity: 0.8;
+}
+
+/* Card1 content */
+.titleheader {
+    color: hsl(179, 62%, 43%);
+}
+
+.subtitleheader {
+    color: hsl(71, 73%, 54%);
+}
+
+.card1para {
+    color: black;
+    font-size: 0.875rem;
+    opacity: 0.8;
+}
+
+/* Card2 price content */
+.pricetag {
+    font-size: 1.5rem;
+    color: white;
+}
+
+.duration {
+    opacity: 0.6;
+    color: white;
+}
+
+/* Active State Button */
+.card2 button {
+    background-color: hsl(71, 73%, 54%);
+    color: white;
+    font-size: 0.875rem;
+    border: none;
+    padding: 5px;
+}
+
+button:hover{
+    cursor: pointer;
+    background-color: hsl(71, 73%, 50%);;
 }
