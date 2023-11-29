@@ -4,7 +4,7 @@
 *,
 *::before,
 *::after {
-    box-sizing: content-box;
+    box-sizing: border-box;
 }
 
 /* Prevent font size inflation */
@@ -26,6 +26,7 @@ blockquote,
 dl,
 dd {
     margin-block-end: 0;
+    margin-block-start: 0;
 }
 
 /* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
@@ -93,8 +94,8 @@ textarea:not([rows]) {
 /*================= CSS RESET ======================== */
 
 :root {
-    --masterPadding-padding: 1rem;
-    --masterWidth-maxwidth: 21rem;
+    --masterPadding-padding: 1.5rem;
+    --masterWidth-maxwidth: 18.75rem;
 }
 
 body {
@@ -106,16 +107,21 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+
 }
 
 /* =============== DIV LAYOUT SECTION =================== */
-/* Sharing styles between div using :is psuedo class */
-:is(div) {
-    padding: var(--masterPadding-padding);
+/* Sharing styles between div using with div container*/
+.flex-container {
     max-width: var(--masterWidth-maxwidth);
-    text-align: left;
-    text-wrap: balance;
 
+}
+
+.card1,
+.card2,
+.card3 {
+    padding: var(--masterPadding-padding);
+    margin: 0;
 }
 
 .card1 {
@@ -126,7 +132,7 @@ body {
 
 .card2 {
     background-color: hsl(179, 62%, 43%);
-   
+
 
 }
 
@@ -138,6 +144,8 @@ body {
 /* Shared Classes */
 .header {
     color: white;
+    padding-bottom: 0.625rem;
+    font-size: 1rem;
 
 }
 
@@ -145,21 +153,30 @@ body {
     color: white;
     font-size: 0.875rem;
     opacity: 0.8;
+    margin: auto;
+    padding-bottom: 1rem;
 }
 
 /* Card1 content */
 .titleheader {
     color: hsl(179, 62%, 43%);
+    font-size: 1.25rem;
+    padding-bottom: 0.625rem;
+
 }
 
 .subtitleheader {
     color: hsl(71, 73%, 54%);
+    font-size: 1rem;
+    padding-bottom: 0.625rem;
+
 }
 
 .card1para {
     color: black;
     font-size: 0.875rem;
     opacity: 0.8;
+    
 }
 
 /* Card2 price content */
@@ -174,13 +191,13 @@ body {
 }
 
 /* Card3 List Content */
-ul{
+ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
 }
 
-li{
+li {
     text-align: left;
     font-size: 0.875rem;
     color: rgba(255, 255, 255, 0.8);
@@ -189,7 +206,10 @@ li{
 /* Active State Button */
 .signlink {
     text-decoration: none;
+    text-align: center;
     color: white;
     background-color: hsl(71, 73%, 54%);
-   
+    display: block;
+    padding: 0.5rem;
+
 }
