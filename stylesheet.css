@@ -126,6 +126,7 @@ body {
 
 .card2 {
     background-color: hsl(179, 62%, 43%);
+   
 
 }
 
@@ -172,16 +173,23 @@ body {
     color: white;
 }
 
-/* Active State Button */
-.card2 button {
-    background-color: hsl(71, 73%, 54%);
-    color: white;
-    font-size: 0.875rem;
-    border: none;
-    padding: 5px;
+/* Card3 List Content */
+ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
 }
 
-button:hover{
-    cursor: pointer;
-    background-color: hsl(71, 73%, 50%);;
+li{
+    text-align: left;
+    font-size: 0.875rem;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+/* Active State Button */
+.signlink {
+    text-decoration: none;
+    color: white;
+    background-color: hsl(71, 73%, 54%);
+   
 }
