@@ -95,7 +95,8 @@ textarea:not([rows]) {
 
 :root {
     --masterPadding-padding: 1.5rem;
-    --masterWidth-maxwidth: 18.75rem;
+    --masterwidth-mobile: 18.75rem;
+    --masterwidth-Desktop: 37.5rem;
 }
 
 body {
@@ -113,7 +114,7 @@ body {
 /* =============== DIV LAYOUT SECTION =================== */
 /* Sharing styles between div using with div container*/
 .flex-container {
-    max-width: var(--masterWidth-maxwidth);
+    max-width: var(--masterwidth-mobile);
 
 }
 
@@ -176,7 +177,7 @@ body {
     color: black;
     font-size: 0.875rem;
     opacity: 0.8;
-    
+
 }
 
 /* Card2 price content */
@@ -211,5 +212,29 @@ li {
     background-color: hsl(71, 73%, 54%);
     display: block;
     padding: 0.5rem;
+
+}
+
+@media (min-width: 50rem) {
+
+    .flex-container {
+
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        grid-auto-rows: auto;
+        justify-content: center;
+        box-sizing: border-box;
+        max-width: 37.5rem;
+        
+    }
+
+    .card1 {
+        grid-column: 1/3;
+    }
+
+    .card2,.card3 {
+        grid-row: 2;
+
+    }
 
 }
