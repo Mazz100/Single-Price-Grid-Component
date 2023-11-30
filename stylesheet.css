@@ -95,7 +95,7 @@ textarea:not([rows]) {
 
 :root {
     --masterPadding-padding: 1.5rem;
-    --masterwidth-mobile: 18.75rem;
+    --masterwidth-mobile: 20rem;
     --masterwidth-Desktop: 34rem;
 }
 
@@ -108,6 +108,7 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    gap: 1.5rem;
 
 }
 
@@ -133,19 +134,22 @@ body {
 .card1 {
     background-color: white;
 
-
+    border-top-right-radius: 5px;
+    border-top-left-radius: 5px;
 }
 
 .card2 {
     background-color: hsl(179, 62%, 43%);
 
-
-
+    
+   
 }
 
 .card3 {
     background-color: hsl(179, 62%, 46%);
 
+    border-bottom-right-radius: 5px;
+    border-bottom-left-radius: 5px;
 }
 
 /* =============== CONTENT STYLE SECTION =================== */
@@ -203,6 +207,7 @@ ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
+
 }
 
 li {
@@ -220,6 +225,8 @@ li {
     padding: 0.5rem;
     width: 100%;
     border-radius: 5px;
+    box-shadow: 2px 2px 4px rgb(0, 0, 0, 0.3);
+
 }
 
 @media (min-width: 50rem) {
@@ -240,10 +247,15 @@ li {
     }
 
     .card2 {
-        grid-area: 2/1/2/2
+        grid-area: 2/1/2/2;
+        
+        border-bottom-left-radius: 5px;
     }
 
     .card3 {
-        grid-area: 2/3/2/2
+        grid-area: 2/3/2/2;
+
+        border-bottom-right-radius: 5px;
     }
+
 }
