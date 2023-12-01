@@ -124,7 +124,7 @@ body {
 .card3 {
     padding: var(--masterPadding-padding);
 
-    /* Flex */
+    /* Flex display for cards */
     display: flex;
     justify-content: space-evenly;
     flex-direction: column;
@@ -227,6 +227,10 @@ li {
     border-radius: 5px;
     box-shadow: 2px 2px 4px rgb(0, 0, 0, 0.3);
 
+}
+
+.signlink:hover{
+    background-color: hsl(71, 63%, 54%);
 }
 
 @media (min-width: 50rem) {
