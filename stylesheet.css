@@ -100,7 +100,7 @@ textarea:not([rows]) {
 }
 
 body {
-    background-color: hsl(218, 22%, 67%);
+    background-color: #E7EFF6;
     font-family: 'Karla', sans-serif;
 
     /* Flex Display Setup */
@@ -141,8 +141,6 @@ body {
 .card2 {
     background-color: hsl(179, 62%, 43%);
 
-    
-   
 }
 
 .card3 {
@@ -229,7 +227,7 @@ li {
 
 }
 
-.signlink:hover{
+.signlink:hover {
     background-color: hsl(71, 63%, 54%);
 }
 
@@ -252,7 +250,7 @@ li {
 
     .card2 {
         grid-area: 2/1/2/2;
-        
+
         border-bottom-left-radius: 5px;
     }
 
